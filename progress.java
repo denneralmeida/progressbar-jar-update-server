@@ -24,7 +24,7 @@ public class Progresso{
                             }
                         }
 
-                        new Principal(login, hora()).setVisible(true);
+                        new Principal(login, hora()).setVisible(true); // Continuação (aqui abre o programa subsequente)
                         dispose();
                     } catch (InterruptedException ex) {
                         JOptionPane.showMessageDialog(null, "O progresso foi interrompido \n" + ex, "Erro de atualização", JOptionPane.ERROR_MESSAGE);
@@ -69,7 +69,7 @@ public class Progresso{
                     }
                     dispose();
                     JOptionPane.showMessageDialog(null, "O sistema foi atualizado com sucesso!", "Info", JOptionPane.INFORMATION_MESSAGE);
-                    Runtime.getRuntime().exec("cmd /c cd C:\\SCA 2.0 && java -jar SCA.jar");
+                    Runtime.getRuntime().exec("cmd /c cd C:\\SCA 2.0 && java -jar SCA.jar"); //aqui poderá obter o path de execução do jar tbm
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(null, "Erro ao buscar arquivos do servidor \n" + ex, "Erro de atualização", JOptionPane.ERROR_MESSAGE);
                 } catch (InterruptedException ex) {
